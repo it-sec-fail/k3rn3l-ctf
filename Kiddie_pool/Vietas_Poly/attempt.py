@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 from pwn import *
+from sympy import symbols, Poly
 
 context.log_level = 'debug' #will print all input and output for debugging purposes
 r = remote('ctf.k3rn3l4rmy.com',2236)
@@ -15,6 +16,9 @@ def parse(polynomial):
     TODO: Parse polynomial
     For example, parse("x^3 + 2x^2 - x + 1") should return [1,2,-1,1]
     '''
+    normal = Poly(polynomial.replace('^','**'))
+    print(normal)
+    return normal
 
 for _ in range(4): get_input() #ignore challenge flavortext
 
