@@ -3,9 +3,10 @@ Basic reverse engineering of an assembler file.
 The important part lies in label5.
 
 Each number from the Pin needed to complete the flag from the section .data is is compared a few times.
-validPinMessage db "Great, your flag flag{K3RN3L_DR0ID_%s}", 0
+validPinMessage db "Great, your flag flag{K3RN3L_DR0ID_%s}"
 
 The numbers are represented by their ASCII-Code -> 0x30 is 0
+
 Each number from the pin has different jump-conditions. 
 Read about assebler jump conditions here:
 https://www.tutorialspoint.com/assembly_programming/assembly_conditions.htm
